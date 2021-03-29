@@ -1,0 +1,58 @@
+configuration {
+	modi: "window,drun";
+	font: "Fira Code Nerd Font 10";
+	lines: 8;
+	location: 0;
+	yoffset: 30;
+	show-icons: true;
+	ssh-client: "openssh";
+	icon-theme: "Papirus";
+	line-padding: 15;
+	padding: 0;
+	hide-scrollbar: false;
+	fixed-num-lines: true;
+	width: 40;
+}
+
+* {
+	background-color: #282a36;
+	color: #f8f8f2;
+}
+
+window {
+	top-padding:10px;
+	background-color: #282a36;
+	color: #f8f8f2;
+}
+
+element {
+	padding: 15px;
+	margin: 0;
+	border: 1px 0 0 0;
+	border-color: #44475a;
+	spacing: 15px;
+}
+
+element-icon {
+	size: 20px;
+}
+
+element selected {
+	background-color: #44475a;
+	color: #f8f8f2;
+}
+
+inputbar {
+	spacing: 0px;
+}
+
+entry {
+	padding: 15px;
+	text-color: #f8f8f2;
+}
+
+prompt {
+	padding: 15px;
+	border: 0 1px 0 0;
+	border-color: #44475a;
+}
