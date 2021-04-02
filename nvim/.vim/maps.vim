@@ -68,6 +68,7 @@ else
   inoremap <silent><expr> <c-space> coc#refresh()
 endif
 
+" run terminal
 set splitright
 function! OpenTerminal()
   " move to right most buffer
