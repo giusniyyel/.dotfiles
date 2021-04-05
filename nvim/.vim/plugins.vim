@@ -13,11 +13,17 @@ Plug 'dracula/vim', {'as':'dracula'}
 
 " TREE
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+
+" ICONS
+Plug 'ryanoasis/vim-devicons'
 
 " TYPING
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
+Plug 'pangloss/vim-javascript'
+Plug 'uiiaoo/java-syntax.vim'
 
 " TMUX
 Plug 'benmills/vimux'
@@ -37,10 +43,9 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
+
+" GIT INTEGRATION
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
-Plug 'scrooloose/nerdcommenter'
-Plug 'pangloss/vim-javascript'
-Plug 'uiiaoo/java-syntax.vim'
 
 call plug#end()

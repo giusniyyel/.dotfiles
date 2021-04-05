@@ -1,5 +1,5 @@
 xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x1080 --output HDMI-1 --mode 1920x1080 --pos 0x0 &
-feh --bg-scale ~/Pictures/wallpaper.png &
+feh --bg-scale ~/Pictures/wallpaper9.jpg &
 setxkbmap latam &
 dunst &
 nm-applet &
