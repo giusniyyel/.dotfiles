@@ -2,14 +2,32 @@
 ![Desktop](screenshots/desktop.png)
 
 # Tabla de contenido
-- [Instalación de ArchLinux] (#instalación-de-archlinux)
-- [Dotfiles] (#dotfiles)
+- [Instalación de ArchLinux](#instalación-de-archlinux)
+  - [Conexión a Internet](#conexión-a-internet)
+  - [Sincronización del reloj](#sincronización-del-reloj)
+  - [Partición de Disco](#partición-de-disco)
+  - [Formato de las Particiones](#formato-de-las-particiones)
+  - [Montando Particiones](#montando-particiones)
+  - [Instalación del Sistema Base](#instalación-del-sistema-base)
+  - [Genear fstab](#generar-fstab)
+  - [Configurar el sistema base](#configurar-el-sistema-base)
+  - [Desmontar Particiones](#desmontar-particiones)
+  - [Primer Inicio](#primer-inicio)
+  - [Paquetes Esenciales](#paquetes-esenciales)
+- [Logueo y Windows Manager](#logueo-y-window-manager)
+- [Dotfiles](#dotfiles)
+- [Python](#python)
+- [Ruby](#ruby)
+- [NPM](#npm)
+- [VIM](#vim)
+- [ZSH & Oh My ZSH](#zsh-&-oh-my-zsh)
+- [Fish Shell](#fish-shell)
 
 # Instalación de ArchLinux
 Se cambiará la distribución de teclado
 `loadkeys la-latin1`
 
-## Conexion a Internet
+## Conexión a Internet
 En este punto necesitamos de una conexión a Internet, para ello nos conectaremos mediante WIFI usando ***iwctl***, se nos abrirá el prompt de ***iwd***, ahí nos conectaremos usando los siguientes comandos:
 ```
 # Para ver todos los dispositivos de red del ordenador.
@@ -33,7 +51,7 @@ ping archlinux.org
 # Para terminar el proceso usamos CTRL + C
 ```
 
-## Sincronización del reloj
+## Sincronización del Reloj
 Una vez conectados a internet debemos sincronizar el reloj:
 `timedatectl set-ntp true`
 
@@ -166,7 +184,7 @@ Hay que generar el archivo fstab que contendrá la tabla de particiones del sist
 Una vez realizado lo anterior, podemos entrar al sistema.
 `arch-chroot /mnt`
 
-## Configurar el sistema base
+## Configurar el Sistema Base
 
 ### Hostname
 **Hostname** es el nombre único del ordenador en la red. Para crearlo usamos.
@@ -242,7 +260,7 @@ Antes de salir, dejaremos activado el grupo wheel dentro de los sudoers.
 Terminando de configurar todo, procedemos a salir del chroot.
 `exit`
 
-## Desmontar particiones
+## Desmontar Particiones
 Las particiones deben ser desmontadas, para ello se debe seguir el siguiente orden:
 1. ***/boot/efi***
 2. ***/home***
@@ -333,7 +351,7 @@ cd yay-git
 makepkg -si
 ```
 
-## Paquetes esenciales
+## Paquetes Esenciales
 Llegados a este punto podemos instalar los paquetes que deseemos, nuestro entorno Arch ya es funcional.
 
 ### CCAT y EXA
@@ -513,10 +531,10 @@ xmonad --recompile
 https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 ```
 
-# PYTHON
+# Python
 `sudo pacman -S python python2 python-pip`
 
-# RUBY
+# Ruby
 ```
 # Instalamos ruby
 sudo pacman -S ruby
@@ -549,7 +567,7 @@ https://github.com/junegunn/vim-plug
 :PlugInstall
 ```
 
-# ZSH & Oh my zsh
+# ZSH & Oh My ZSH
 ```
 sudo pacman -S zsh
 
@@ -560,7 +578,7 @@ chsh -s $(which zsh)
 https://github.com/ohmyzsh/ohmyzsh/wiki
 ```
 
-# FISH
+# Fish Shell
 ```
 #Instalación de fish
 sudo pacman -S fish
