@@ -157,6 +157,8 @@ myKeys =
     ("M-C-r", spawn "xmonad --restart"),
     -- Quit xmonad
     ("M-C-q", io exitSuccess),
+    -- Show power menu
+    ("M-q", spawn "menu_powermenu"),
 
     ----------------- Floating windows -----------------
 
