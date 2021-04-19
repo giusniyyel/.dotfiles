@@ -242,7 +242,8 @@ main = do
         focusedBorderColor = myFocusColor,
         -- Log hook
         logHook = workspaceHistoryHook <+> dynamicLogWithPP xmobarPP {
-            ppOutput = hPutStrLn xmobarLaptop, --x >> hPutStrLn xmobarMonitor x,
+            --ppOutput = \x -> hPutStrLn xmobarLaptop x >> hPutStrLn xmobarMonitor x,
+            ppOutput = hPutStrLn xmobarLaptop,
             -- Current workspace in xmobar
             ppCurrent = xmobarColor green "" . wrap "[" "]",
             -- Visible but not current workspace
