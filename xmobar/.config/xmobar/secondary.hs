@@ -1,12 +1,12 @@
 -- http://projects.haskell.org/xmobar/
 
 Config { 
-    font = "xft:UbuntuMono Nerd Font:weight=bold:pixelsize=16:antialias=true:hinting=true",
-    bgColor = "#292d3e",
-    fgColor = "#f07178",
+    font = "xft:Hack-Bold:size=10:Bold:antialias=true,Hack Nerd Font:size=13:Bold:antialias=true:hinting=true",
+    bgColor = "#282A36",
+    fgColor = "#f8f8f2",
     lowerOnStart = True,
     hideOnStart = False,
-    allDesktops = True,
+    allDesktops = False,
     persistent = True,
     commands = [ 
         Run Date "  %d %b %Y %H:%M " "date" 600,
@@ -19,11 +19,7 @@ Config {
     ],
     sepChar = "%",
     alignSep = "}{",
-    template = "<fc=#b303ff>   </fc> %UnsafeStdinReader% }{ \
-        \<fc=#e1acff> %updates% </fc>\
-        \<fc=#FFB86C> %cpu% </fc>\
-        \<fc=#FF5555> %memory% </fc>\
-        \<fc=#c3e88d> %wlp2s0% </fc>\
+    template = "<fc=#57c7ff>   </fc> %UnsafeStdinReader% }{ \
         \<fc=#82AAFF> %volume% </fc>\
         \<fc=#8BE9FD> %date% </fc>"
 }

@@ -76,7 +76,7 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-    spawnOnce "trayer --edge top  --monitor 1 --widthtype pixel --width 40 --heighttype pixel --height 18 --align right --transparent true --alpha 0 --tint 0x292d3e --iconspacing 3 --distance 1 &"
+    spawnOnce "trayer --edge top  --monitor 1 --widthtype pixel --width 70 --heighttype pixel --height 18 --align right --transparent true --alpha 0 --tint 0x292d3e --iconspacing 3 --distance 1 &"
     setWMName "LG3D"
 
 
@@ -242,8 +242,8 @@ main = do
         focusedBorderColor = myFocusColor,
         -- Log hook
         logHook = workspaceHistoryHook <+> dynamicLogWithPP xmobarPP {
-            --ppOutput = \x -> hPutStrLn xmobarLaptop x >> hPutStrLn xmobarMonitor x,
-            ppOutput = hPutStrLn xmobarLaptop,
+            ppOutput = \x -> hPutStrLn xmobarLaptop x >> hPutStrLn xmobarMonitor x,
+            -- ppOutput = hPutStrLn xmobarLaptop,
             -- Current workspace in xmobar
             ppCurrent = xmobarColor green "" . wrap "[" "]",
             -- Visible but not current workspace

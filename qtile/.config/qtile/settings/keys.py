@@ -50,14 +50,18 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Menu
     ([mod], "m", lazy.spawn("rofi -show drun")),
 
+    # Menu
+    ([mod], "q", lazy.spawn("menu_powermenu")),
+
+
     # Window Nav
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("firefox")),
+    ([mod], "b", lazy.spawn("brave")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], "e", lazy.spawn("thunar")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
@@ -67,7 +71,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
-    ([mod], "s", lazy.spawn("scrot")),
+    ([mod], "s", lazy.spawn("scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'")),
+    ([mod, "shift"], "s", lazy.spawn("scrot -s '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'")),
 
     # ------------ Hardware Configs ------------
 

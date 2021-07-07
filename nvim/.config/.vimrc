@@ -24,7 +24,8 @@ set encoding=utf-8
 
 " WHITESPACE
 set nowrap
-set textwidth=90
+set textwidth=150
+set colorcolumn=150
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2

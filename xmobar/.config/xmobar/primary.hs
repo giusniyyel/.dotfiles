@@ -34,7 +34,7 @@ Config {
 
     -- plugins
     commands = [ 
-        Run Com "/home/giusniyyel/.config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 20,
+        Run Com "/home/giusniyyel/.config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 600,
         Run Date "  %d %b %Y %H:%M " "date" 600,
         Run Com "battery" [] "battery" 600,
         Run Com "brightness" [] "brightness" 10,
