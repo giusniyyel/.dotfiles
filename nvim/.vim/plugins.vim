@@ -48,4 +48,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 
+" highlighting and indenting to JSX and TSX files.
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
 call plug#end()
