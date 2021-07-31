@@ -113,3 +113,7 @@ set STARSHIP_PROMPT_ORDER time user host dir git package node ruby golang php ru
 
 # Color Scheme & Theme
 starship init fish | source
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /home/giusniyyel/workspace/WebProjects/electron-laravel/node_modules/tabtab/.completions/electron-forge.fish ]; and . /home/giusniyyel/workspace/WebProjects/electron-laravel/node_modules/tabtab/.completions/electron-forge.fish
