@@ -1,40 +1,14 @@
-### EXPORT ###
-set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
-set fish_greeting ""                                # Supresses fish's intro message
-set TERM "xterm-256color"                         # Sets the terminal type
-
-### "nvim" as manpager
-set -x MANPAGER "nvim -c 'set ft=man' -"
+# Commands to run in interactive sessions can go here
+set fish_greeting ""
+set TERM "xterm-256color"
+starship init fish | source
 
 ### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
-set fish_color_normal brcyan
+set fish_color_normal '#8be9fd'
 set fish_color_autosuggestion '#7d7d7d'
-set fish_color_command brcyan
-set fish_color_error '#ff6c6b'
-set fish_color_param brcyan
-
-# Function for creating a backup file
-# ex: backup file.txt
-# result: copies file as file.txt.bak
-function backup --argument filename
-    cp $filename $filename.bak
-end
-
-# Function for copying files and directories, even recursively.
-# ex: copy DIRNAME LOCATIONS
-# result: copies the directory and all of its contents.
-function copy
-    set count (count $argv | tr -d \n)
-    if test "$count" = 2; and test -d "$argv[1]"
-	set from (echo $argv[1] | trim-right /)
-	set to (echo $argv[2])
-        command cp -r $from $to
-    else
-        command cp $argv
-    end
-end
-
-### ALIASES ###
+set fish_color_command '#50fa7b'
+set fish_color_error '#ff5555'
+set fish_color_param '#8be9fd'
 
 # navigation
 alias ..='cd ..'
@@ -74,11 +48,6 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
-
 # git
 alias addup='git add -u'
 alias addall='git add .'
@@ -92,12 +61,6 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
-
-# switch between shells
-# I do not recommend switching default SHELL from bash.
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 # STARSHIP THEME
 set STARSHIP_PROMPT_ADD_NEWLINE false
@@ -113,7 +76,3 @@ set STARSHIP_PROMPT_ORDER time user host dir git package node ruby golang php ru
 
 # Color Scheme & Theme
 starship init fish | source
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /home/giusniyyel/workspace/WebProjects/electron-laravel/node_modules/tabtab/.completions/electron-forge.fish ]; and . /home/giusniyyel/workspace/WebProjects/electron-laravel/node_modules/tabtab/.completions/electron-forge.fish
