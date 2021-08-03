@@ -1,0 +1,25 @@
+# Fish Shell
+exec fish &
+
+# Multi Monitors
+xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x1080 --output HDMI-1 --mode 1920x1080 --pos 0x0 &
+
+# Background
+nitrogen --restore &
+
+# Keyboard
+setxkbmap latam &
+
+# Packages
+nm-applet &
+udiskie -t &
+volumeicon &
+cbatticon &
+dunst &
+
+# PATH Variables
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
+export PATH=$PATH:/opt/flutter/bin
+
+# ENV Variables
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
