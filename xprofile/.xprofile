@@ -21,6 +21,8 @@ dunst &
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 export PATH=$PATH:/opt/flutter/bin
 export PATH=$PATH:/opt/VSCode-linux-x64/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/go/bin
 
 # ENV Variables
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable

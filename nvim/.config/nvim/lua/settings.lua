@@ -148,8 +148,8 @@ o.mouse = "a"
 -- Don't redraw while executing macros
 o.ttyfast = true
 
--- Set zsh as shell (which zsh)
-o.shell = "/usr/bin/zsh"
+-- Set fish as shell (which fish)
+o.shell = "/usr/bin/fish"
 
 -- Highlight the screen line of the cursor with CursorLine
 wo.cursorline = true

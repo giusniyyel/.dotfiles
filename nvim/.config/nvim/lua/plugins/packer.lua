@@ -1,7 +1,6 @@
-vim.cmd [[packadd packer.nvim]]
 return require("packer").startup(
   function()
-    use {"ahmedkhalf/lsp-rooter.nvim"}
+    -- use {"ahmedkhalf/lsp-rooter.nvim"}
     use {"dracula/vim", as = "dracula"}
     use {"folke/lua-dev.nvim"}
     use {"folke/todo-comments.nvim"}
@@ -10,6 +9,7 @@ return require("packer").startup(
     use {"glepnir/lspsaga.nvim"}
     use {"hoob3rt/lualine.nvim"}
     use {"hrsh7th/nvim-compe"}
+    use {"jwalton512/vim-blade"}
     use {"kyazdani42/nvim-tree.lua"}
     use {"kyazdani42/nvim-web-devicons"}
     use {"lewis6991/gitsigns.nvim"}

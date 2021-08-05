@@ -4,3 +4,5 @@ require('settings')
 require('binds')
 -- Plugins
 require('plugins')
+-- Native Language Server Provider
+require('lsp')
