@@ -28,6 +28,7 @@ return require("packer").startup(
     use {"nvim-treesitter/nvim-treesitter", branch = "0.5-compat"}
     use {"nvim-treesitter/nvim-treesitter-textobjects", branch = "0.5-compat"}
     use {"nvim-treesitter/playground"}
+    use {"pangloss/vim-javascript"}
     use {"phaazon/hop.nvim"}
     use {"romainl/vim-cool"}
     use {"SirVer/ultisnips"}

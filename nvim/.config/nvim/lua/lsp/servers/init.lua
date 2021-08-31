@@ -8,3 +8,5 @@ require('lsp.servers.tsserver')
 require('lsp.servers.efm')
 -- Vimscript
 require('lsp.servers.vim')
+-- Intelephense
+require('lsp.servers.intelephense')

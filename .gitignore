@@ -1,1 +1,6 @@
 rofi/.config/rofi/powermenu
+scripts/.local/bin/pip
+scripts/.local/bin/pip3
+scripts/.local/bin/pip3.9
+scripts/.local/bin/virtualenv
+
